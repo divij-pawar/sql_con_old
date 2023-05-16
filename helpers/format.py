@@ -1,12 +1,5 @@
 import pandas as pd
 
-"""
-def smalldatetime(t):
-	t = t+":00"
-	d = t[:4]+"-"+t[4:6]+"-"+t[6:8]+" "+t[9:20]
-	print(d)
-	return (d)
-"""
 
 def format_df(df):
 	df_merged = pd.concat(df, ignore_index=True)
@@ -25,3 +18,11 @@ def format_df(df):
 	# Fill NA values with 0
 	df_merged = df_merged.fillna(0)
 	return df_merged
+
+"""
+def smalldatetime(t):
+	t = t+":00"
+	d = t[:4]+"-"+t[4:6]+"-"+t[6:8]+" "+t[9:20]
+	print(d)
+	return (d)
+"""

@@ -9,7 +9,7 @@ def _sendRow(query, data):
 		cur.connection.close()
 	except Exception as e :
 		print(query)
-		print("[Error] in (SQLDATA,_sendData) msg: ",str(e))
+		print("[Error] in (helpers.send,_sendData) msg: ",str(e))
 
 def _send_NSEMCX(df_merged):
 	# Writing to NSEMCX row by row

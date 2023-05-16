@@ -13,7 +13,7 @@ def _forFetchingJson(query,one=False):
 		return (r[0] if r else None) if one else r
 	except Exception as e :
 		print(query)
-		print("[Error] in (SQLDATA,_forFetchingJson) msg: ",str(e))
+		print("[Error] in (helpers.fetch,_forFetchingJson) msg: ",str(e))
 
 def _queryDB(database, id):
 	try:
@@ -31,7 +31,7 @@ def _queryDB(database, id):
 		return df
 	except Exception as e:
 		print(query)
-		print("[Error] in (SQLDATA,_queryDB) msg: ",str(e))
+		print("[Error] in (helpers.fetch,_queryDB) msg: ",str(e))
 		return None
 
 def _getID( df):
