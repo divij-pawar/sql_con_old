@@ -44,3 +44,5 @@ def MCX_conversion(df_mcx):
     return(df)
     #df_merged = pd.concat([df_mcx.set_index('scripcode'),df.set_index('scripcode')], axis=1, join='inner').reset_index()
  
+ #def clean(df):
+    

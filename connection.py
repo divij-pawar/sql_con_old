@@ -2,6 +2,7 @@ import pandas as pd
 from helpers.fetch import new_rows
 from helpers.send import _send_NSEMCX
 from helpers.format import format_df
+from helpers.conversions import NSE_conversion, MCX_conversion
 import asyncio
 
 
@@ -78,6 +79,8 @@ async def m3():
 
 async def commit():
 	df_merged = format_df(d)
+	#df_merged.to_excel("merged_file.csv")
+
 	_send_NSEMCX(df_merged)
 	print(f"SENT to NSEMCX: {len(df_merged)}")
 
@@ -96,6 +99,3 @@ async def main():
 loop = asyncio.get_event_loop()
 loop.create_task(main())
 loop.run_forever()
-
-
-

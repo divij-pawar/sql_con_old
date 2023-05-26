@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import date
+from datetime import date, timedelta
 
 from helpers.db_connect import _dbConnection
 
@@ -17,7 +17,8 @@ def _forFetchingJson(query,one=False):
 
 def _queryDB(database, id):
 	try:
-		d = date.today().strftime("%Y%m%d") # Todays date
+		delta = timedelta(days=1)
+		d = (date.today()-delta).strftime("%Y%m%d") # Todays date
 		print("Date:  ",d)
 		print("ID ", id)
 		# Fetch all rows from database where date is today and maintradeid > id 
