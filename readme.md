@@ -1,19 +1,34 @@
 # Installation
 
-```$ pip install -r requirements.txt ```
-<br>
+```bash
+$ pip install -r requirements.txt 
+```
+
 ## Create environment file
-```$ touch .env ```
+
+```bash
+ $ touch .env 
+ ```
 ## Define environment variables in the .env file 
-```$ nano .env ```
+
+```bash
+$ nano .env 
+```
 ```
 server = '192.168.XXX.XXX'
 username = 'XXXXXXXX'
 password = 'XXXXXXXX'
 ```
-## Create Virtual Environment
-```$ python -m venv env ``` <br>
-```$ source ./env/bin/activate```
 
-## Run
-```(env)$ python connection.py```
+## Create and activate virtual environment
+
+```bash
+$ python -m venv env
+$ source ./env/bin/activate
+```
+
+# Run
+
+```bash
+(env)$ python connection.py
+```
